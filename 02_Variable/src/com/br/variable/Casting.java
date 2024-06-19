@@ -115,7 +115,11 @@ public class Casting {
 		int i = 290;
 		byte b = (byte)i;
 		
-		System.out.println("b의 결과 : " + b);
+		// byte 저장 가능 범위 : -128 ~ 127
+		
+		System.out.println("b의 결과 : " + b); // 강제형변환은 신중하게 ! (데이터 손실 방지)
+		
+		
 		
 	}
 
