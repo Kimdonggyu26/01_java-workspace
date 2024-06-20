@@ -68,15 +68,21 @@ public class Logical {
 		
 		System.out.println("사용자가 종료의사를 밝혔습니까 : " + (ch == 'y' || ch == 'Y'));
 		
+
+	}
+	public void method5() {
+		//System.out.println(false && true);	dead code -> 이유 : 앞의 값으로 인해 정해졌기 때문에 실행 되지 않음
+		//System.out.println(true || false);	dead code -> 이유 : 앞의 값으로 인해 정해졌기 때문에 실행 되지 않음
 		
+		// 예시)
+		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		boolean result = (num <  5) && (++num > 0);
 		
-		
-		
-		
-		
-		
-		
+		System.out.println("num :" + num);
+		System.out.println("result : " + result);
 		
 		
 		
