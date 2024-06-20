@@ -9,7 +9,9 @@ public class Run {
 		//Vp.method1();
 		//Vp.method2();
 		//Vp.method3();
-		Vp.method4();
+		//Vp.method4();
+		//Vp.method5();
+		Vp.method6();
 		
 		
 		
