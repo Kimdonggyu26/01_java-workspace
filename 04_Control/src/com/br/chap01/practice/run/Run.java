@@ -11,7 +11,8 @@ public class Run {
 		//p1.practice2();
 		//p1.practice3();
 		//p1.practice4();
-		p1.practice5();
+		//p1.practice5();
+		//p1.practice8();
 		
 	
 }
