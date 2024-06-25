@@ -39,6 +39,14 @@ public class LoopMain {
 		//b.method2();
 		//b.method3();
 		
+		//f.remind();
+		
+		Continue c = new Continue();
+		
+		//c.method1();
+		//c.method2();
+		//c.method3();
+		c.method4();
 	}
 
 }

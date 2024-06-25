@@ -27,9 +27,9 @@ public class LoopPractice {
 			} else {
 				for (int i = 1; i <= num; i++) {
 					System.out.print(i + " ");
-				}
+				}break;
 			}
-			break;
+			
 
 		}
 
@@ -48,15 +48,29 @@ public class LoopPractice {
 		Scanner sc = new Scanner(System.in);
 		
 		while(true) {
-			System.out.println("1이상의 숫자를 입력하세요 : ");
+			System.out.print("1이상의 숫자를 입력하세요 : ");
 			int num = sc.nextInt();
 			
 			if(num >= 1) {
 				for( int i = num; i >= 1; i--) {
-					System.out.println(i + " ");
-				}
+					System.out.print(i + " ");
+				}break;
+			}else {
+				System.out.print("잘못 입력하셨습니다. 다시 입력해주세요.");
 			}
 		}
+	}
+	public void practice5() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수를 하나 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		for(int i = 1; i <= num; i++) {
+			System.out.print(i + " + " + num + " = ");
+		}
+		
+	
 	}
 
 }

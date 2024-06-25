@@ -246,12 +246,12 @@ public class For {
 	}
 	public void method13() {
 		// 2단 ~ 9단까지 전체 출력
-		
-		for(int ran = 2; ran <= 9; ran++) {		
-		for(int num = 1; num <= 9; num++) {
-			System.out.printf("%d x %d = %d\n", ran, num, ran * num);
-		}
-		System.out.println();
+
+		for (int ran = 2; ran <= 9; ran++) {
+			for (int num = 1; num <= 9; num++) {
+				System.out.printf("%d x %d = %d\n", ran, num, ran * num);
+			}
+			System.out.println();
 		}
 	}
 
@@ -305,7 +305,57 @@ public class For {
 			System.out.println();
 		}
 	}
-	
+	public void remind() {
+		/*Scanner sc = new Scanner(System.in);
+
+		for (;;) {
+			System.out.print("정수 : ");
+			int num = sc.nextInt();
+			for (int i = 1; i <= num; i++)
+				if (num % 2 == 0) {
+					System.out.print("수");
+					break;
+				} else
+					System.out.print("박");
+			break;
+		}*/
+		
+		/*
+		 * 무한반복 {
+		 * 		1. 사용자에게 정수 입력받기
+		 * 		2. 양수인지 아닌지 판별하여 그에 맞는 결과 출력
+		 * 			2-1. 양수일 경우 
+		 *				=> 1부터 사용자가 입력한 수까지 1씩 증가시키면서
+		 *				   해당 숫자가 홀수인지 짝수인지 판별하여 박, 수 출력
+		 *				=> 무한반복문이 종료되도록 
+		 * 			2-2. 양수가 아닌 경우
+		 * 				=> 재입력 문구 출력
+		 */
+		Scanner sc = new Scanner(System.in); 
+		
+		while(true) {
+			System.out.print("정수 : ");
+			int num = sc.nextInt();
+			
+			if(num > 0) {
+				for(int i = 1; i <= num; i++) {
+					if(i % 2 == 0) {
+						System.out.print("수");
+					}else {
+						System.out.print("박");
+					}
+				}break;
+			}else {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+			}
+				
+		}
+		
+		
+		
+		
+		
+	}
 }
 
 	
