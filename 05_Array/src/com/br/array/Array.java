@@ -372,12 +372,14 @@ public class Array {
 			// 3. 반복문을 활용해서 문자열의 각 인덱스 자리의 문자를
 			//    배열의 각 인덱스 자리에 대입
 			for(int i = 0; i < word.length(); i++) {
-				char[i] = word.charAt(i);
+				ch[i] = word.charAt(i);
 				
 			}
 			
 			// 4. 배열에 담겨 있는 값 전체 출력
-				System.out.println(char[i]);
+				for(int i = 0; i < word.length(); i++) {
+					System.out.printf("%d번 인덱스 문자 : %s\n", i, ch[i]);
+					}
 		} // 1e
 		                                   
 			
