@@ -381,7 +381,61 @@ public class Array {
 					System.out.printf("%d번 인덱스 문자 : %s\n", i, ch[i]);
 					}
 		} // 1e
-		                                   
+		
+		public void method11() { // 1s
+			/*
+			 * 사용자에게 문자열을 입력받고 이때 각 문자마다 +1이 진행된 문자열을 얻기
+			 * 
+			 * ex) "AAP" (입력) => "BBQ" (출력) "GDKKN" (입력) => "HELLO" (출력)
+			 * 
+			 * 해당 출력할 결과 값을 String result에 기록한 후 출력하시오.
+			 */
+			// 1. 사용자에게 문자열 입력받기
+			Scanner sc = new Scanner(System.in);
+			System.out.print("문자열 : ");
+			String word = sc.nextLine();
+
+			// 2. 문자열의 글자수만큼의 문자를 보관할 char배열 생성
+			char[] ch = new char[word.length()];
+
+			// 3. char배열의 각 인덱스 자리에 문자열로부터 추출된 문자값의 그 다음문자값을 대입
+			for (int i = 0; i < word.length(); i++) {
+				ch[i] = (char) (word.charAt(i) + 1);
+
+			}
+			// 4. char배열에 대입되어 있는 각 문자들을 문자열로 연이어줌 => String result변수에 기록
+			/*
+			 * String result = ""; for(int i = 0; i < word.length(); i++) { result += ch[i];
+			 * }
+			 */
+
+			String result = String.valueOf(ch); // 전달된 값을 가지고 문자열로 만들어 반환해주는 메소드
+			// 5. result출력 (최종결과)
+			System.out.println(result);
+			
+		} //1e
+		    public void method12() {
+		    	/*
+		    	 * < 배열 선언과 동시에 초기화 >
+		    	 * 배열 생성과 동시에 각 인덱스에 초기값 대입하는 과정
+		    	 * 
+		    	 * [표현법]
+		    	 * 자료형[] 배열명 = new 자료형[]{값1, 값2, ...};	- 방법1
+		    	 * 자로형[] 배열명 = {값1, 값2, ...}				- 방법2
+		    	 */
+		    	
+		    	int[] arr1 = new int[] {1, 2, 3, 4};
+		    	int[] arr2 = {1, 2, 3, 4};
+		    	
+		    	// 배열을 먼저 선언한 후에 초기화를 진행하고자 한다면 반드시 방법 1을 이용
+		    	int[] arr;
+		    	//arr = {1, 2, 3, 4};
+		    	arr = new int[] {1, 2, 3, 4};
+		    	
+		    	System.out.println(arr1 == arr2);
+		    	// 각 변수에 담겨있는 주소값을 가지고 비교 => false
+		    	
+		    } //1e
 			
 		}
 		

@@ -27,8 +27,8 @@ public class OperatorMain {
 		//lo.method1();
 		//lo.method2();
 		//lo.method3();
-		//lo.method4();
-		lo.method5();
+		lo.method4();
+		//lo.method5();
 		
 
 		
