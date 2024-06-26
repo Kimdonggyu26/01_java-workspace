@@ -12,7 +12,7 @@ public class RunClass {
 		Variable Vari = new Variable();
 		
 		//Vari.whyUseVariable();
-		//Vari.declareVariable();
+		Vari.declareVariable();
 		//Vari.constant();
 		
 		//KeyboardInput클래스의 inputTest1 메소드 호출
