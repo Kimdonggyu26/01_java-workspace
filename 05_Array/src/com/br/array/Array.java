@@ -370,8 +370,8 @@ public class Array {
 			char[] ch = new char[word.length()];
 			
 			// 3. 반복문을 활용해서 문자열의 각 인덱스 자리의 문자를
-			//    배열의 각 인덱스 자리에 대입
-			for(int i = 0; i < word.length(); i++) {
+			//    배열의 각 인덱스 자리에 대입  
+			for(int i = 0; i < word.length(); i++) {  // 문자열의 길이는 문자열.length(); <--> 배열의 길이는 배열.length;
 				ch[i] = word.charAt(i);
 				
 			}
