@@ -436,7 +436,30 @@ public class Array {
 		    	// 각 변수에 담겨있는 주소값을 가지고 비교 => false
 		    	
 		    } //1e
-			
+			public void advancedFor() {
+				
+				int[] arr = {1, 2, 3, 4, 5};
+				
+				//for loop문
+				for(int i = 0; i < arr.length; i++) {
+					System.out.println(arr[i]);
+				}
+				System.out.println("======");
+				// advanced for문 (향상된 for문)
+				/*
+				 * for(변수 : 순회하고자하는배열|컬렉션) {
+				 * 
+				 * }
+				 * 반복문이 돌때마다 매번 앞쪽 변수에는 
+				 * 각 인덱스에 담겨있는 실제 데이터값이 매번 담김
+				 */
+				int index = 0;
+				 for(int value : arr) {//변수 = arr[0]; => 변수 = arr[1]; ... => 변수 = arr[마지막];
+					 System.out.println(index++ + "번째 : " + value);					 		
+					 // index++;
+					 // ㄴ 
+				 }
+			}  
 		}
 		
 		
