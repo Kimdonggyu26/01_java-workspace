@@ -21,7 +21,27 @@ public class Student {
 	/*
 	 * 2. 생성자
 	 */
+	// 기본생성자 작성해보기
+	public Student() {}
 	
+	// 이름, 나이, 키 대입해주는 매개변수생성자 작성해보기
+	public Student(String name, int age, double height) {
+		this.name = name;
+		this.age = age;
+		this.height = height;
+	}
+
+	// 이름, 나이, 키, 국어점수, 수학점수 대입해주는 매개변수 생성자 작성해보기
+	public Student(String name, int age, double height, int korScore, int mathScore) {
+		/*
+		this.name = name;
+		this.age = age;
+		this.height = height;
+		*/
+		this(name, age, height);
+		this.korScore = korScore;
+		this.mathScore = mathScore;
+	}
 	/*
 	 * 3. 메소드 | 멤버메소드
 	 *    기능을 정의하는 부분

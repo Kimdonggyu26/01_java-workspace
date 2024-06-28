@@ -2,20 +2,22 @@ package com.br.chap03_class.model.vo;
 
 public class Person {
 	
+	// 필드 | 멤버변수
 	private String id;
-	private String pw;
+	private String pwd;
 	private String name;
 	private int age;
 	private char gender;
 	private String phone;
 	private String email;
-	
+
+	// setter메소드 (7개)
 	public void setId(String id) {
 		this.id = id;
 	}
 	
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	
 	public void setName(String name) {
@@ -29,7 +31,7 @@ public class Person {
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-
+	
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
@@ -38,12 +40,13 @@ public class Person {
 		this.email = email;
 	}
 	
+	// getter메소드 (7개)
 	public String getId() {
 		return id;
 	}
 	
-	public String getPw() {
-		return pw;
+	public String getPwd() {
+		return pwd;
 	}
 	
 	public String getName() {
@@ -56,7 +59,6 @@ public class Person {
 	
 	public char getGender() {
 		return gender;
-		
 	}
 	
 	public String getPhone() {
@@ -67,13 +69,5 @@ public class Person {
 		return email;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+
