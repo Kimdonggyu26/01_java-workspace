@@ -30,7 +30,7 @@ public class Book {
 	public void setdiscountRate(double discountRate) {
 		this.discountRate = discountRate;
 	}
-	public double discountRate() {
+	public double getdiscountRate() {
 		return discountRate;
 	}
 	public void setauthor(String author) {
