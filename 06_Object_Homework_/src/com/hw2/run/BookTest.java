@@ -18,10 +18,9 @@ public class BookTest {
 		
 		System.out.println("============");
 		System.out.println("도서명 = " + b3.gettitle());
-		System.out.println("할인된 가격 = " + (int)(b3.getprice() - (b3.getprice()*b3.getdiscountRate())) + "원");
+		System.out.println("할인된 가격 = " + (int)(b3.getprice() - (b3.getprice() * b3.getdiscountRate())) + "원");
 		System.out.println("도서명 = " + b2.gettitle());
 		System.out.println("할인된 가격 = " + (int)(b2.getprice() - (b2.getprice() * b2.getdiscountRate())) + "원");
-		
 
 	}
 

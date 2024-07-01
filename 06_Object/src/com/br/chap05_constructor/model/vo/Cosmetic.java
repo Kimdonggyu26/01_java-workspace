@@ -26,48 +26,42 @@ public class Cosmetic {
 	private int price;
 	private String brand;
 	private String category;
-	
-	public Cosmetic() {}
-	
-	public Cosmetic(String cName, int price, String brand, String category) {
+
+	// 참조 자료형의 필드도 둘 수 있다.
+	private String[] ingredient;
+
+	public Cosmetic() {
+	}
+
+	public Cosmetic(String cName, int price, String brand, String category, String[] ingredient) {
 		this.cName = cName;
 		this.price = price;
 		this.brand = brand;
 		this.category = category;
+		this.ingredient = ingredient;
+	}
+
+	public void setcName(String cName) {
+		this.cName = cName;
+	}
+
+	public void setprice(int price) {
+		this.price = price;
+	}
+
+	public void setbrand(String brand) {
+		this.brand = brand;
+	}
+
+	public void setcategory(String category) {
+		this.category = category;
+	}
+
+	public void setIngredient(String[] ingredient) {
+		this.ingredient = ingredient;
 
 	}
-	
-	
-		public void setcName(String cName) {
-			this.cName = cName;
-	}
-		public void setprice(int price) {
-			this.price = price;
-		}
-		public void setbrand(String brand) {
-			this.brand = brand;
-		}
-		public void setcategory(String category) {
-			this.category = category;
-		}
-		
-		public String getcName() {
-			return cName;
-		}
-		public int price() {
-			return price;
-		}
-		public String getbrand() {
-			return brand;
-		}
-		public String category() {
-			return category;
-		}
-		
-		public String information() {
-			String str = "상품명 : " + cName + ", 가격 : " + price + ", 브랜드 : " + brand + ", 종류 : " + category;
-			return str;
-		}
+
 	/*
 	 * < 생성자 >
 	 * 
@@ -110,9 +104,39 @@ public class Cosmetic {
 	 *   단, 멤버변수와 밀접하게 연관되어있는 코드를 작성
 	 * 
 	 */
-	
-	
-	
+	public String getcName() {
+		return cName;
+	}
+
+	public int getprice() {
+		return price;
+	}
+
+	public String getbrand() {
+		return brand;
+	}
+
+	public String getcategory() {
+		return category;
+	}
+
+	public String[] getIngredient() {
+		return ingredient;
+	}
+
+	public String information() {
+		String str = "상품명 : " + cName + ", 가격 : " + price + ", 브랜드 : " 
+					+ brand + ", 종류 : " + category + "\n성분: ";
+		
+		for(int i = 0; i < ingredient.length; i++) {
+			str += ingredient[i];
+			if(i < ingredient.length-1)	{
+				str += ", ";
+			}
+		}
+		
+		return str;
+	}
 	
 
 }

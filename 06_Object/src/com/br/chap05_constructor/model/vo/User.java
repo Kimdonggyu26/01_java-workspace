@@ -11,6 +11,12 @@ public class User {
 	private int age;
 	private char gender;
 	
+	/*
+	 * < Has-a 관계(포함관계) >
+	 * 주석 복붙해야함
+	 */
+	private Cosmetic cos;
+	
 	
 	// 생성자부
 
@@ -56,38 +62,64 @@ public class User {
 	public String getUserId() {
 		return userId;
 	}
+
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+
 	public String getUserPwd() {
 		return userPwd;
 	}
+
 	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
 	}
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public int getAge() {
 		return age;
 	}
+
 	public void setAge(int age) {
 		this.age = age;
 	}
+
 	public char getGender() {
 		return gender;
 	}
+
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
+
+	public void setCos(Cosmetic cos) {
+		this.cos = cos;
+	}
+
+	public Cosmetic getCos() {
+		return cos;
+	}
 	
 	public String information() {
-		return "userId: " + userId + ", userPwd: " + userPwd
-			+ ", userName: " + userName + ", age: " + age
-			+ ", gender: " + gender;
+		
+		String str = "userId: " + userId + ", userPwd: " + userPwd
+				+ ", userName: " + userName + ", age: " + age
+				+ ", gender: " + gender + "\n<화장품정보>\n";
+		
+		if (cos != null) {
+			str += cos.information();
+		}else {
+			str += "화장품없음";
+		}
+		
+		return str; 
 	}
 
 }

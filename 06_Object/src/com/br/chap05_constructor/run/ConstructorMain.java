@@ -32,9 +32,17 @@ public class ConstructorMain {
 			System.out.println(u3.information());
 			System.out.println("==============");
 			
-			Cosmetic c = new Cosmetic("스킨", 12000, "Torriden", "기초 화장품");
 			
-			System.out.println(c.information());
+			//String[] ingredient = {"알코올", "정제수", "색소"};
+			//Cosmetic c = new Cosmetic("스킨", 12000, "Torriden", "기초 화장품", ingredient);
+			
+			Cosmetic cos = new Cosmetic("스킨", 12000, "Torriden", "기초 화장품", new String [] {"알코올", "정제수", "색소"});
+			System.out.println(cos.information());
+			System.out.println("============================");
+			
+			u3.setCos(cos);
+			
+			System.out.println(u3.information());
 	}
 	
 
