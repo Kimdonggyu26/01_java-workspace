@@ -52,13 +52,13 @@ public class Run {
 			}
 		}
 		for (int i = 0; i < s.length; i++) {
-			if(s[i].getGrade() == 0) {
-				break;
-			}else{
-				System.out.println(s[i].information());
-			}
-	
-		}
+	         if(s[i] == null) {
+	            break;
+	         }else{
+	            System.out.println(s[i].information());
+	         }
+	   
+	      }
 
 	}
 
