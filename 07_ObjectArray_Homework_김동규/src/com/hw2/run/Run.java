@@ -51,15 +51,28 @@ public class Run {
 				break;
 			}
 		}
+		/*
+		for (int i = 0; i < s.length; i++) {
+	    	  if(s[i].getGrade() != 0) {		// null.? 으로 접근하면 nullpointerexception 오류가 뜸
+	    		  System.out.println(s[i].information());
+	    	  }else
+	    		  break;
+	      }
+	      */
+		
 		for (int i = 0; i < s.length; i++) {
 	         if(s[i] == null) {
 	            break;
 	         }else{
 	            System.out.println(s[i].information());
 	         }
+	         
+	         
 	   
 	      }
-
+		
 	}
-
 }
+	
+
+

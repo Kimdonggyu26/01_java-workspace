@@ -17,6 +17,7 @@ public class Run {
 		}
 		System.out.println("===============================================================");
 		
+		
 		em[0].setEmpNo(0);
 		em[0].setEmpName("김말똥");
 		em[0].setDept("영업부");

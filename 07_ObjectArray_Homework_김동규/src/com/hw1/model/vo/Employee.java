@@ -23,6 +23,7 @@ public class Employee {
 		this.phone = phone;
 		this.address = address;
 	}
+	
 	public Employee(int empNo, String empName, String dept, String job, int age, char gender, 
 			     int salary, double bonustPoint, String phone, String address) 
 	{
