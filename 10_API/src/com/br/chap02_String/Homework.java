@@ -19,19 +19,23 @@ public class Homework {
 						+ "10,백년미가(유촌점),광주광역시 서구 유덕로28번길 18,062-946-3392,한상맛집,2022-01-11";
 		
 		// 위의 shopCsv 문자열을 적절하게 분리해서 
-		String[] arr = shopCsv.split("\n");
+		String[] shops = shopCsv.split("\n");
 		
-		for(int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
+		Shop[] shopArr = new Shop[shops.length];
+		
+		for(int i = 0; i < shops.length; i++) {
+
+			String[] arr = shops[i].split(",");
+			
 		}
 		
 		System.out.println("=====================");
 		
 		
-		System.out.println(arr[0]);
+		System.out.println(shops[0]);
 		
 		
-		String[] k = arr[0].split(",");
+		String[] k = shops[0].split(",");
 		
 		
 		System.out.println("=====================");
@@ -42,7 +46,7 @@ public class Homework {
 			System.out.println(k[i]);
 		}
 		
-		Shop[] s = new Shop[10];
+		
 		
 
 	}
