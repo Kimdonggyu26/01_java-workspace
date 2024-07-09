@@ -1,5 +1,6 @@
 package com.hw1.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -52,7 +53,13 @@ public class BookController {
 		Calendar cal = Calendar.getInstance();
 		String[] str = newDate.split("-");
 		
-		Calendar publishDate = 
+		int[] num = new int[3];
+		
+		for(int i = 0; i < str.length; i++) {
+			num[i] = Integer.parseInt(str[i]);
+		}
+		
+		Calendar publishDate = new GregorianCalendar(num[0], num[1], num[2]);
 		
 		// ------------------------------------------------------
 		// 3. 나머지 전달받은 값들과 위에서 변환작업을 해준 price와 date값을 가지고
@@ -72,6 +79,11 @@ public class BookController {
 		
 		// 코드 작성
 		
+		// list[4].getPublishDate() <- Calendar객체
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+		String str = sdf.format(list[4].getPublishDate().getTimeInMillis());
+		System.out.println(str + " 출간");
 	}
 	
 	
@@ -83,7 +95,21 @@ public class BookController {
 		
 		// 코드 작성
 		
+		//1. for loop문
+		/*
+		for(int i = 0; i < list.length; i++) {
+			if(list[i].getTitle().contains(searchTitle)) {
+				System.out.println(list[i]);
+			}
+		}
+		*/
 		
+		// 2. for each문
+		for(Book bk : list) {
+			if(bk.getTitle().contains(searchTitle)) {
+				System.out.println(bk);
+			}
+		}
 	}
 	
 	
