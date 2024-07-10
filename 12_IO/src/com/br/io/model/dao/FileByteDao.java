@@ -46,7 +46,7 @@ public class FileByteDao {
 			byte[] arr = {99, 100, 101};
 			fout.write(arr); // 'c' 'd' 'e' 순차적으로 저장
 			
-			fout.write(arr, 1, 2); // 'd' 'e' 순차적으로 저장
+			fout.write(arr, 1, 2); // 'd' 'e' 순차적으로 저장(arr배열의 1번인덱스로부터 2개의 데이터 저장)
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
