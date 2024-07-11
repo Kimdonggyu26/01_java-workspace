@@ -19,6 +19,7 @@ public class NoteMenu {
 		System.out.println("3. 노트 열어서 수정하기");
 		System.out.println("4. 끝내기");
 		System.out.print("번호를 입력하세요 : ");
+		
 		int num = sc.nextInt();
 		sc.nextLine();
 		
@@ -26,8 +27,7 @@ public class NoteMenu {
 		case 1: createNote(); break;
 		case 2: openNote(); break;
 		case 3: editNote(); break;
-		case 4: break;
-		
+		case 4: return;
 		}
 			
 		}
