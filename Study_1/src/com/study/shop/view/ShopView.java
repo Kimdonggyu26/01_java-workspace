@@ -101,6 +101,7 @@ public class ShopView {
 		
 		List<Shop> searchList = sh.searchShopInfo(name);
 		
+		System.out.println();
 		
 		
 	}
