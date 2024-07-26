@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.sh.controller.CoffeeManager;
-import com.sh.model.vo.Bread;
-import com.sh.model.vo.Coffee;
 import com.sh.model.vo.CoffeeShop;
+import com.sh.model.vo.UserName;
 
 public class CoffeeMenu {
 	Scanner scan = new Scanner(System.in);
@@ -52,9 +51,12 @@ public class CoffeeMenu {
 			
 			System.out.println("이름 : ");
 			String userName = scan.nextLine();
+			
 			System.out.println("잔액을 입력하세요 : ");
 			int money = scan.nextInt();
+			
 			cm.checkingUser(userName,money);
+			
 			while(true) {
 			
 			System.out.println("\n"+userName+"님 환영합니다.");
@@ -67,6 +69,20 @@ public class CoffeeMenu {
 			System.out.println("입력 : ");
 			int num = scan.nextInt();
 			
+			switch(num) {
+			case 1: System.out.println(cm.coffeeInquiry());
+					System.out.println(cm.breadInquiry());
+					break;
+					
+			case 2: searchCafe();
+					break;
+					
+			case 3: myBasket();
+					break;
+			case 4: orderCafe();
+					break;
+			case 0: return;
+			}
 			
 			}
 		}
@@ -83,6 +99,18 @@ public class CoffeeMenu {
 		int num =scan.nextInt();
 		scan.nextLine();
 		
+		if(num == 1) {
+			System.out.println("변경할 가게명 입력 : ");
+			String chName = scan.nextLine();
+			cm.management(num, chName);
+		} else if(num == 2) {
+			System.out.println("변경할 가게 주소 입력 : ");
+			String chName = scan.nextLine();
+			cm.management(num, chName);
+		}
+		
+		
+		
 	}
 	public void managingCoffeeMenu() {
 		while(true) {
@@ -96,7 +124,29 @@ public class CoffeeMenu {
 		System.out.println("3. 뒤로가기");
 		int num = scan.nextInt();
 		
-		
+		switch(num){
+		case 1: System.out.println("삭제할 메뉴 번호 입력 : ");
+		        int index = scan.nextInt();
+		        scan.nextLine();
+		        cm.deleteCoffee(index);
+		        break;
+		        
+		case 2: System.out.println("추가할 커피 메뉴 이름 : ");
+		        String cName = scan.nextLine();
+		        
+		        System.out.println("추가할 커피 메뉴 가격  : ");
+		        int price = scan.nextInt();
+		        scan.nextLine();
+		        
+		        System.out.println("추가할 커피 메뉴 갯수 입력 : ");
+		        int count = scan.nextInt();
+		        scan.nextLine();
+		        
+		        cm.insertCoffee(cName, price, count);
+		        break;
+		        
+		case 3: return;
+		}
 
 
 				
@@ -114,7 +164,27 @@ public class CoffeeMenu {
 		System.out.println("3. 뒤로가기");
 		int num = scan.nextInt();
 		
-		
+		switch(num) {
+		case 1: System.out.println("삭제할 빵 메뉴 번호 입력 : ");
+				int index = scan.nextInt();
+				scan.nextLine();
+				cm.deleteBread(index);
+				break;
+						
+		case 2: System.out.println("추가할 빵 메뉴 이름 입력 : ");
+				String bName = scan.nextLine();
+				
+				System.out.println("추가할 빵 메뉴 가격 입력 : ");
+				int price = scan.nextInt();
+				scan.nextLine();
+				
+				System.out.println("추가할 빵 갯수 입력 : ");
+				int count = scan.nextInt();
+				scan.nextLine();
+				cm.insertBread(bName, price, count);
+				break;
+		case 3: return;
+		}
 		
 		}
 		
@@ -122,7 +192,9 @@ public class CoffeeMenu {
 	
 	public void selectAll() {
 		
-		cm.selectAll();
+		CoffeeShop cs = cm.selectAll();
+		
+		System.out.println(cs);
 		
 		
 	}
@@ -131,15 +203,58 @@ public class CoffeeMenu {
 		System.out.println("1. 빵 검색 ");
 		System.out.println("2. 커피 검색");
 		int num = scan.nextInt(); 
+		scan.nextLine();
 		
+		System.out.println("검색할 메뉴 검색(키워드 가능) : ");
+		String keyword = scan.nextLine();
+		
+		List<Object> searchKeywordBread = cm.searchCafe(num, keyword);
+		
+		System.out.println(searchKeywordBread);
+		
+		
+		
+	
 		
 		
 	}
 	public void myBasket() {
 		
+		List <Object> baske = cm.myBasketcheck();
+		
+		System.out.println(baske);
+		
+		System.out.println("구매하시겠습니까? (y/n) : ");
+		String yn = scan.nextLine();
+		
+		int sum = cm.lastCheck();
+		
+		if (yn.equals('y')) {
+			if(  < sum) {
+				
+			}
+		}
+		
+		
+		
+		
+		
 	}
-	public void oredrCafe() {
+	public void orderCafe() {
 	
+		
+		System.out.println("=== 검색 ===");
+		System.out.println("1. 빵 검색 ");
+		System.out.println("2. 커피 검색");
+		int num = scan.nextInt(); 
+		scan.nextLine();
+		
+		System.out.println("주문할 메뉴 번호 입력 : ");
+		int index = scan.nextInt();
+		
+		cm.order(num, index);
+		
+		
 		
 		
 	}
